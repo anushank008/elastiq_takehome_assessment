@@ -36,6 +36,7 @@ This test verifies that the table on the page has exactly 24 rows. It handles pa
                 break
     assert rows_count == 24, "FAIL: Table is having less than 24 entries"
     print("Total number of rows = ", rows_count)
+ ```
 
 2. Test to Validate Search Box
 This test enters the text "New York" into the search box and validates that exactly 5 rows are shown as search results.
@@ -47,8 +48,10 @@ def test_searchBox(self):
     rows = table.find_elements(By.XPATH, "//tbody/tr")
     search_result_rows = len(rows)
     assert search_result_rows == 5, "FAIL: Search results count is not equal to 5"
+```
 
 ## Running Tests
 To run the tests, use the following command:
 ```bash
 pytest test_validate_search.py
+``` 
