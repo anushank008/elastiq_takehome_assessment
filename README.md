@@ -18,7 +18,8 @@ This repository contains tests for **Selenium WebDriver** written in Python usin
 ## Tests
 1. Test to Validate Table Entries
 This test verifies that the table on the page has exactly 24 rows. It handles pagination to navigate through the table pages.
-   def test_ValidateTable(self):
+ ```bash
+ def test_ValidateTable(self):
     table = self.driver.find_element(By.CSS_SELECTOR, "table[id='example']")
     rows_count = 0
     if table.is_displayed():
@@ -38,7 +39,7 @@ This test verifies that the table on the page has exactly 24 rows. It handles pa
 
 2. Test to Validate Search Box
 This test enters the text "New York" into the search box and validates that exactly 5 rows are shown as search results.
-
+```bash
 def test_searchBox(self):
     search_box = self.driver.find_element(By.CSS_SELECTOR, "input[type='search']")
     search_box.send_keys("New York")
@@ -49,4 +50,5 @@ def test_searchBox(self):
 
 ## Running Tests
 To run the tests, use the following command:
+```bash
 pytest test_validate_search.py
